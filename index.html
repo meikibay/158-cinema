@@ -48,11 +48,29 @@
 		  </a>
 		</div>	
 	</div>
+		<div class="resultados">
 
+			<br>
+		</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>	
 	<script src="js/jquery.validate.js"></script>
 
 	</body>
+
+	<script>
+
+		
+			orig = "http://www.omdbapi.com/?t=war&y=&plot=short&r=json";
+
+			$.getJSON(orig, function( data ) {
+			$( ".resultados" ).append( '<h1>' + data["Title"] + '</h1>');
+			$( ".resultados" ).append( '<h2>' + data["Runtime"] + '</h2>');
+			});
+			
+
+
+	</script>
+
 </html>
